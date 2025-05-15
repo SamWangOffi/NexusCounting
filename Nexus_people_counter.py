@@ -6,6 +6,8 @@ from datetime import datetime
 from collections import defaultdict, deque
 from ultralytics import YOLO
 from yolox.tracker.byte_tracker import BYTETracker
+import sys
+sys.path.append("ByteTrack")
 
 # ==== RTSP Settings ====
 rtsp_url = "rtsp://admin:admin@10.100.124.17/defaultPrimary?streamType=u"
