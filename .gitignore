@@ -1,0 +1,45 @@
+# Python 一般忽略项
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+.pytest_cache/
+
+# Python 虚拟环境 (这些在你的“干净”副本里应该不存在，但以防万一)
+env/
+venv/
+Nexus/ # 你的虚拟环境名称
+
+# 敏感文件 / 配置
+.env
+*.env # 匹配所有以 .env 结尾的文件
+
+# 核心敏感令牌文件 (非常重要！)
+# 如果你的 test_token 文件夹在 backend/OutlookSync/ 里面
+backend/OutlookSync/test_token/
+# 也可以更通用地排除所有 .json 文件，如果你知道不需要追踪任何 json 文件
+# backend/OutlookSync/*.json
+
+# 大文件 (如模型文件)
+*.whl # Python wheel 文件
+*.pt  # 例如 yolov8n.pt 等 PyTorch 模型文件
+backend/*.pt
+backend/people_counter/*.pt
+
+# Node / React 前端特定忽略项 (如果你的 frontend/ 文件夹在这个目录下)
+node_modules/
+build/
+dist/
+.parcel-cache/
+.vite/
+.next/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.eslintcache
+
+# 操作系统相关文件
+.DS_Store # macOS 系统文件
+
+# 忽略 OutlookSync 文件夹 (暂时不上传)
+backend/OutlookSync/
