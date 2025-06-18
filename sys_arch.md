@@ -2,14 +2,14 @@
 
 ```mermaid
 graph TD
+    direction LR
+
     subgraph Client/External Systems
         A[Web Frontend/Admin Panel] -->|HTTP/REST| FlaskApp
         B[Microsoft Identity Platform] -->|OAuth 2.0| OutlookSyncModule
     end
 
     subgraph Flask Main Application (app.py)
-        direction LR
-
         subgraph Core API Endpoints
             API_FACE_UPLOAD[/api/face/upload]
             API_FACE_DELETE[/api/face/delete]
